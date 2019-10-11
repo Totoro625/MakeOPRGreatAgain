@@ -1,12 +1,12 @@
 // ==UserScript==
 // @id			 5 Star One Key for Android
 // @name         5 Star One Key for Android
-// @version      0.30-modify-0.34
+// @version      0.30-modify-1.00
 // @description  Give five star with single click
 // @updateURL    https://github.com/Totoro625/MakeOPRGreatAgain/raw/master/5StarOneKeyForAndroid.user.js
 // @downloadURL  https://github.com/Totoro625/MakeOPRGreatAgain/raw/master/5StarOneKeyForAndroid.user.js
 // @author       jqqqqqqqqqq | modify by totoro625
-// @match        https://opr.ingress.com/recon
+// @match        https://wayfarer.nianticlabs.com/review
 // @require      https://code.jquery.com/jquery-3.2.1.min.js
 // @supportURL   https://totoro.ink
 // @grant        unsafeWindow
@@ -126,7 +126,7 @@ function add_button() {
     submitAndNext.className = "button submit-button";
     submitAndNext.innerHTML = `<span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;<span class="glyphicon glyphicon-forward"></span>`;
     submitAndNext.title = "Submit and go to next review";
-    submitAndNext.addEventListener("click", function() {angular.element(document.getElementById('AnswersController')).scope().answerCtrl.submitForm();setTimeout(function(){ window.location.assign("/recon");}, 1000);});
+    submitAndNext.addEventListener("click", function() {angular.element(document.getElementById('AnswersController')).scope().answerCtrl.submitForm();setTimeout(function(){ window.location.assign("/review");}, 1000);});
     button_region.insertBefore(submitAndNext, null);
 }
 
